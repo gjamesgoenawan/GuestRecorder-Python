@@ -11,7 +11,7 @@ pip install -r requirements.txt
 Theere are two python files included in this repository:
 1. app.py<br>
    Main Script with GUI included.
-3. src/source.py
+3. src/source.py<br>
    Source Script without GUI, with complete functionality.
 
 
