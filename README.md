@@ -12,7 +12,7 @@ Theere are two python files included in this repository:
 1. app.py<br>
    Main Script with GUI included.
 3. src/source.py<br>
-   Source Script without GUI, with complete functionality. <br>
+   Source Script without GUI, with complete functionality. <br><br>
 Both of these files can be run individually by running the default python launch command `python3 FILENAME.py`
 
 
