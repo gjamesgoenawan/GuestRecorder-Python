@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<title>TULIPA Coworking & Office Regsitration Portal</title>
+		<link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+	</head>
+	<body class=back>
+		<div class=wrapper>
+			<center><img src="{{ url_for('static', filename='images/logo.png') }}" widht="312.19" height="150"></img>
+				<div class="cont">
+					<form method="POST" autocomplete="off">
+  						<input type="text" name="name" placeholder="Identification Number">
+  						<input type="text" name="purpose" placeholder="Purpose of Visit">
+  						<select class=cselect name=company>
+							<option value = "-1" selected hidden>Destination</option>
+   								{% for company in companies %}
+    							<option value = "{{company}}">{{company}}</option>"
+    							{% endfor %}
+						</select><br>
+  						<button type="submit">Submit</button>
+					</form> 
+				</div>
+			</center>
+		</div>
+	</body>
+</html>

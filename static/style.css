@@ -1,0 +1,127 @@
+@font-face {
+  font-family: montserrat;
+  font-weight: 400;
+  src: url(fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: montserrat;
+  font-weight: 500;
+  src: url(fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: montserrat;
+  font-weight: 700;
+  src: url(fonts/Montserrat-Bold.ttf);
+}
+.back{
+  background-image: url(images/bg.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#cont1{
+	text-align: center;
+	font-family: montserrat;
+	font-weight: 500;
+	color: #0a4809;
+	font-size: 16pt;
+}
+.cselect{
+	color: rgba(0,0,0,0.53);
+	transition:0s;
+	font-family: montserrat;
+	padding: 20px 25px;
+	border: 2px solid rgba(0,0,0,0.2);
+	margin-top: 12px;
+	font-weight: 400;
+	font-size: 18pt;
+	width: 500px;
+	outline:none;
+	background-color: white;
+	appearance: none;
+}
+.cselect:hover{
+	transition:0.5s;
+	border: 2px solid rgba(0,0,0,0.5);
+}
+.cselect:focus {
+	-webkit-transition: 0.5s;
+  	transition: 0.5s;
+  	border: 2px solid rgba(16,86,15,0.5);
+  	box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.24);
+}
+.wrapper{
+	position: absolute;
+	-ms-transform: translate(-50%, -50%);
+  	transform: translate(-50%, -50%);
+	width:650px;
+	height:470px;
+	top: 43%;
+  	left: 50%;
+}
+.cont{
+	margin-top: 20px;
+	padding:35px 0px 50px 0px;
+	border: 0px;
+	background-color: white;
+	width:650px;
+	height:320px;
+}
+input[type=text] {
+	display: block;
+  	margin-top: 12px;
+	font-family: montserrat;
+	font-weight: 400;
+	font-size: 18pt;
+	width: 500px;
+	border: 2px solid rgba(0,0,0,0.2);
+	padding: 20px 25px;
+	-webkit-transition: 0s;
+  	transition: 0;
+  	outline:none;
+}
+input[type=text]:hover {
+	transition:0.5s;
+	border: 2px solid rgba(0,0,0,0.5);
+}
+input[type=text]:focus {
+	-webkit-transition: 0.5s;
+  	transition: 0.5s;
+  	border: 2px solid rgba(16,86,15,0.5);
+  	box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.24);
+}
+button{
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	margin-top: 15px;
+	-webkit-transition: 0s;
+  	transition: 0s;
+	font-family: montserrat;
+	font-weight: 800;
+	font-size: 18pt;
+	background-color: #0a4809;
+	
+	border:0px;
+	color: white;
+	padding: 20px 50px;
+	text-align: center;
+	text-decoration: none;
+	outline:none;
+	cursor: pointer;
+}
+button:hover{
+	-webkit-transition: 0.5s;
+  	transition: 0.5s;
+  	background-color: #10560f;
+}
+button:active{
+	-webkit-transition: 0.5s;
+  	transition: 0.5s;
+  	background-color: #062f06;
+}
+option{
+	font-size:18pt;
+}
+
+
