@@ -8,11 +8,13 @@ git clone https://github.com/gabrieljames01/GuestRecorder-Python.git
 cd GuestRecorder-Python/
 pip install -r requirements.txt
 ```
-There are two python files included in this repository:
- - app.py<br>Main Script with GUI included.
- - src/source.py<br> Source Script without GUI, with complete functionality. 
 
-Both of these files can be run individually by running the default python launch command `python3 FILENAME.py`
+## Running Flask Server
+To server has to serve `127.0.0.1:5000`, hence run:
+```
+flask run -h 127.0.0.1 -p 5000
+```
+
 
 ## Functionalities
 Record the identification of the guest, the destination, as well as purpose of visit. These records can be accessed by opening excel files, which are labeled by dates (If the program is **first** executed on a particular date, a new excel file will be generated).<br>

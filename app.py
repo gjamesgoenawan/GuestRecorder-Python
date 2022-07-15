@@ -8,22 +8,22 @@ from time import sleep
 app = Flask(__name__)
 ui = FlaskUI(app)
 
-filelist = open("db/db.txt","r").readlines()
+filelist = open(os.path.join("db", "db.txt"),"r").readlines()
 companies=[]
 for i in filelist:
 	companies.append(i.strip())
 
 def register(cid, desc, comp):
-	if not os.path.exists("History"):
-		os.makedirs("History")
+	if not os.path.exists("history"):
+		os.makedirs("history")
 	try:
-		f = open("History\\"+str(datetime.now().strftime("%d-%m-%Y")) + ".csv", "r")
+		f = open(os.path.join("history", str(datetime.now().strftime("%d-%m-%Y")) + ".csv"), "r")
 		f.close()
 	except IOError:
-		f = open("History\\"+str(datetime.now().strftime("%d-%m-%Y")) + ".csv", "w")
+		f = open(os.path.join("history", str(datetime.now().strftime("%d-%m-%Y")) + ".csv"), "w")
 		f.close()
 	finally:
-			ff = open("History\\"+str(datetime.now().strftime("%d-%m-%Y")) + ".csv", "r")
+			ff = open(os.path.join("history", str(datetime.now().strftime("%d-%m-%Y")) + ".csv"), "r")
 			f = ff.readlines()
 	cnt = 0
 	for i in f:
@@ -42,7 +42,7 @@ def register(cid, desc, comp):
 		desc = "-"
 		comp = "-"
 	fields=[datetime.now().strftime("%H:%M:%S"),cid,desc,comp, status]
-	with open("History\\" + str(datetime.now().strftime("%d-%m-%Y")) + ".csv", 'a', newline='') as file:
+	with open(os.path.join("history", str(datetime.now().strftime("%d-%m-%Y")) + ".csv"), 'a', newline='') as file:
 		csv.writer(file).writerow(fields)
 	file.close()
 	print("Data recorded successfully!")
@@ -55,7 +55,6 @@ def index():
 
 @app.route('/', methods=['POST'])
 def form_post():
-	print(request.form)
 	cid = request.form['name']
 	desc = request.form['purpose']
 	comp = request.form['company']
@@ -67,6 +66,6 @@ def form_post():
 		register(cid, desc,comp)
 	return render_template('done.html')
 
-
-ui.run()
+if __name__ == "__main__":
+	ui.run()
  
